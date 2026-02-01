@@ -9,18 +9,18 @@ permissions:
   contents: write
 
 jobs:
-  generate:
+  snake:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Generate snake
+      - name: Generate Snake
         uses: Platane/snk@v3
         with:
           github_user_name: divyanshu76
           outputs: |
             dist/github-contribution-grid-snake.svg
 
-      - name: Push snake
+      - name: Push to Output Branch
         uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: output
